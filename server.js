@@ -52,7 +52,7 @@ app.get('/now/app/cover', function(req, res) {
 });
 
 app.post('/now/app/weather', function(req, res) {
-  getForecastDarkSky(req.body.latitude, req.body.longitude, req.body.units,
+  getForecastDarkSky('55.407545', '10.401621', 'metric',
     function(err, data) {
     if (!err) {
       res.json(data);
@@ -61,8 +61,8 @@ app.post('/now/app/weather', function(req, res) {
       if (err !== 'No API key') {
         console.log('Error getting DarkSky forecast: ', err);
       }
-      getForecastOpenweathermap(req.body.latitude, req.body.longitude,
-        req.body.units, function(err, data) {
+      getForecastOpenweathermap('55.407545', '10.401621',
+        'metric', function(err, data) {
         if (!err) {
           res.json(data);
           res.send();

@@ -214,3 +214,13 @@ input[type=text] {
 ::-moz-selection {
   background: #e0d5ff;
 }
+
+.clock {
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  font-size: 46px;
+}
